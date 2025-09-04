@@ -1262,6 +1262,45 @@ fieldset {
 
 
 /*Beginning of LS Logo Page*/
+/* --- ABOUT LS LOGO WRITEUP SECTION --- */
+.about-ls-logo {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-ls-logo h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.ls-logo-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.ls-logo-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.ls-logo-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.ls-logo-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
 .ls-section h1 {
     text-align: center;
     color: #c71585;
@@ -1348,46 +1387,6 @@ fieldset {
     opacity: 1;
   }
 }
-
-
-/* --- ABOUT LS LOGO WRITEUP SECTION --- */
-.about-ls-logo {
-  background-color: #fff;
-  padding: 50px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.about-ls-logo h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #c71585;
-}
-
-.ls-logo-writeup h3 {
-  font-size: 1.5rem;
-  margin-top: 30px;
-  color: #c71585;
-}
-
-.ls-logo-writeup p {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin: 15px 0;
-  color: #444;
-}
-
-.ls-logo-writeup ul {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.ls-logo-writeup ul li {
-  list-style-type: disc;
-  margin-bottom: 8px;
-  color: #555;
-} 
 
 /*Ending of LS Logo Page*/
 
@@ -1535,12 +1534,58 @@ fieldset {
 /*Ending of Frontend Section*/
 
 /*Beginning of Auspis Prime Section*/
+.about-auspisprime {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-auspisprime h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.auspisprime-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.auspisprime-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.auspisprime-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.auspisprime-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.auspisprime-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
 .image-gallery-auspisprime {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   padding: 20px 0;
+  margin-bottom: 50px;
 }
 
 .image-gallery-auspisprime img {
@@ -1591,17 +1636,67 @@ fieldset {
   transform: scale(1.05);
 }
 
-.mimasonlinestore-video {
-    justify-content: center;
-    padding: 30px 50px;
-    text-align: center;
+/* .mimasonlinestore-video { 
+  display: flex;
 }
 
 .mimasonlinestore-video video {
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
 }
- 
+
+.mimasonlinestore-video h1 {
+  text-align: center;
+  color: #c71585;
+  margin-bottom: 50px;
+} */
+ .mimasonlinestore-video {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.mimasonlinestore-video h1 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* makes them stack on small screens */
+}
+
+.video-card {
+  flex: 1 1 45%;
+  max-width: 450px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
 /*Ending of Mima's Online Store Section*/
 
 
@@ -1673,6 +1768,298 @@ fieldset {
 }
 
 /*Ending of Royent Flyer Section*/
+
+/*Beginning of Asta Beauty Corner Flyer Section*/
+.about-asta {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-asta h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.asta-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.asta-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.asta-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.asta-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.asta-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-asta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-asta img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-asta img:hover {
+  transform: scale(1.05);
+}
+/*Ending of Asta Beauty Corner Flyer Section*/
+
+/*Beginning of Git Hub Page*/
+/* .about-github {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.github-image {
+  text-align: center;
+}
+
+.github-image img {
+  width: 100px;
+  height: auto;
+}
+
+.about-github h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.github-writeup a {
+    text-decoration: none;
+    background-color: #c71585;
+    color: white;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.github-writeup a:hover {
+    background-color: red;
+}
+
+.github-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.github-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.github-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.github-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.github-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-github {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-github img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-github img:hover {
+  transform: scale(1.05);
+}
+
+.viewprofile-btn button {
+    padding: 10px 20px;
+    background-color: #c71585;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.myfrontend-cards-image button a {
+    text-decoration: none;
+    color: white;
+}
+
+.myfrontend-cards-image button:hover {
+    background-color: red;
+} */
+
+.about-github {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #444;
+  line-height: 1.7;
+}
+
+.about-github h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #c71585;
+}
+
+.github-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.github-image img {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.github-image img:hover {
+  transform: scale(1.1);
+}
+
+.viewprofile-button {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.viewprofile-button .cards-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #c71585;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.viewprofile-button .cards-btn:hover {
+  background: red;
+  transform: scale(1.05);
+}
+
+.github-writeup h3 {
+  font-size: 1.3rem;
+  margin: 25px 0 15px;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.github-writeup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.github-writeup li {
+  background: #f7f7f7;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.github-writeup li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.github-writeup li strong {
+  font-size: 1.1rem;
+}
+
+.github-writeup li p {
+  margin: 8px 0;
+  color: #444;
+}
+
+.github-writeup li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.github-writeup li a:hover {
+  color: red;
+}
+
+.github-writeup ul:last-of-type {
+  margin-top: 20px;
+}
+
+.github-writeup ul li {
+  margin-bottom: 10px;
+}
+
+
+
+/*Ending of Git Hub Page*/
 
 /*Beginning of Mima's Fast Food Ui/Ux Page*/
 .image-gallery-mimasuiux {
