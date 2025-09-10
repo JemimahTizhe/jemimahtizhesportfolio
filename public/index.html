@@ -1,89 +1,193 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jemimah Tizhe's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/Images/Fav Icon.jpg">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  
+<!-- Beginning of Header -->
+ <header class="nav-bar">
+  <div class="logo animate__animated animate__slideInDown">
+    <h2>Jemimah <br>Tizhe</h2>
+  </div>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.2.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.2.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <nav>
+    <ul class="nav-menu animate__animated animate__slideInDown">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/projects.html">Projects</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <div class="nav-right animate__animated animate__slideInDown">
+    <ul class="social-menu">
+      <li><a href="http://wa.me/2349152848768"><img src="/Social Media Icons/whatsapp.png" alt="whatsapp"></a></li>
+      <li><a href="https://www.instagram.com/jemimahtizhee/profilecard/?igsh=MWNyNzJzZTdpeWxxYg=="><img src="/Social Media Icons/instagram.png" alt="instagram"></a></li>
+      <li><a href="https://www.facebook.com/share/14G5j4Ss99P/?mibextid=wwXIfr"><img src="/Social Media Icons/facebook.png" alt="Facebook"></a></li>
+      <li><a href="https://t.snapchat.com/CyZt7ylK"><img src="/Social Media Icons/snapchat.png" alt="snapchat"></a></li>
+      <li><a href="https://www.tiktok.com/@jemimah.hhh?_t=ZM-8yT65F9akpa&_r=1"><img src="/Social Media Icons/tiktok.png" alt="tiktok"></a></li>
+      <li><a href="https://www.linkedin.com/in/jemimah-tizhe"><img src="/Social Media Icons/linkedin.png" alt="linkedin"></a></li>
+    </ul>
+  </div>
+</header>
+<!-- Ending of Header -->
+
+
+<!-- Beginning of First Section  -->
+    <div class="first-section">
+        <div class="first-section-writeup animate__animated animate__backInLeft">
+            <h1>Hello, I'm Jemimah Tizhe</h1>
+        <p>I am a Ui/Ux Designer, Social Media Manager, Graphics Designer and a Front End Developer.</p>
+
+        <a href="/contact.html" class="contactme-btn">Contact Me</a>
+        </button>
+        </div>
+
+        <div class="first-section-image animate__animated animate__backInRight">
+            <img src="/Images/first section image3.jpg" alt="Jemimah">
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+<!-- End of First Section  -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<!-- Beginning of What I Do Section  -->
+ <div class="whatido">
+  <h1 class="animate__animated animate__slideInDown">What I Do</h1>
+  
+  <div class="whatido-section">
+    <div class="whatido-image animate__animated animate__zoomIn">
+      <img src="/Images/soundmind.png" alt="Graphics Design">
+      <div class="whatido-writeup">
+        <h3>Graphics Design</h3>
+        <a class="see-more-button" href="/projectsgraphics.html">See More</a>
+      </div>
+    </div>
+    
+    <div class="whatido-image animate__animated animate__zoomIn">
+      <img src="/Images/Royent Football Academy.PNG" alt="Logo Design">
+      <div class="whatido-writeup">
+        <h3>Logo Design</h3>
+        <a class="see-more-button" href="/projectslogo.html">See More</a>
+      </div>
+    </div>
+    
+    <div class="whatido-image animate__animated animate__zoomIn">
+      <img src="/Images/Mima's Online Store.jpg" alt="Mima's Online Store">
+      <div class="whatido-writeup">
+        <h3>Mima's Online Store</h3>
+        <a class="see-more-button" href="/mimasonlinestoreflyers.html">See More</a>
+      </div>
+    </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <div class="whatido-image animate__animated animate__zoomIn">
+      <img src="/Images/another landing.png" alt="Ui/Ux Design">
+      <div class="whatido-writeup">
+        <h3>Ui/Ux Design</h3>
+        <a class="see-more-button" href="/projectsuiux.html">See More</a>
+      </div>
+    </div>
+        
+    <div class="whatido-image animate__animated animate__zoomIn">
+      <img src="/Images/Mima's Fast Food.jpg" alt="Mima's Fast Food">
+      <div class="whatido-writeup">
+        <h3>Mima's Fast Food</h3>
+        <a class="see-more-button" href="/mimasfastfood.html">See More</a>
+      </div>
+    </div>
+  </div>
+</div><!-- Ending of What I Do Section  -->
+
+<!-- Beginning of About Me Section  -->
+ <div class="article-section">
+  <h1 class="animate__animated animate__slideInDown">About Me</h1>
+  <article class="article">
+    <div class="article-image animate__animated animate__backInLeft">
+      <img src="/Images/article image.jpg" alt="Jemimah Tizhe">
+    </div>
+
+    <div class="article-writeup animate__animated animate__slideInRight">
+      <h3 >Want to know more about me?</h3>
+      <p>I'm a passionate tech enthusiast with a Bachelor's degree in Computer Science from Igbinedion University. I’ve gained experience at Ha-Shem Limited and New Horizons, and I specialize in UI/UX Design, Frontend Development, and Graphic Design. My journey includes impactful personal and remote projects, where I focus on creating user-friendly solutions. I believe in collaboration, excellence, and using tech-driven strategies to bring ideas to life.</p>
+      <a class="see-more-button" href="/about.html">See More!</a>
+    </div>
+  </article>
+</div>
+<!-- Ending of About Me Section  -->
+
+<!-- Beginning og Testimonials Section  -->
+ <div class="testimonials-section">
+  <h1 class="section-title animate__animated animate__slideInDown">What People Say</h1>
+  
+  <div class="testimonials-container animate__animated animate__zoomIn">
+    <div class="testimonial-card">
+      <p class="testimonial-text">"Jemimah brought our brand to life with her creativity. Her designs speak volumes. We'll definitely work with her again!"</p>
+      <p class="testimonial-author">— Mayor., Soundmind CEO</p>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">"Working with Jemimah was smooth and professional. She helped me with my logo for my royent football academy and we all love it!"</p>
+      <p class="testimonial-author">— King Obi</p>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">"From social media management to graphics, Jemimah handles it all with excellence. Highly recommended!"</p>
+      <p class="testimonial-author">— Mima's Fast Food</p>
+    </div>
+  </div>
+</div>
+<!-- Ending of Testimonials Section  -->
+
+<!-- Beginning of Footer Section  -->
+ <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2 class="animate__animated animate__slideInLeft">Jemimah Tizhe</h2>
+            <p class="animate__animated animate__slideInLeft">Designing with purpose, developing with passion.</p>
+        </div>
+        
+        <div class="footer-links animate__animated animate__slideInUp">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/photos.html">Photos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-social animate__animated animate__slideInRight">
+          <h3>Connect With Me</h3>
+          <div class="social-icons">
+            <a href="http://wa.me/2349152848768"><img src="/Social Media Icons/whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/jemimahtizhee/profilecard/?igsh=MWNyNzJzZTdpeWxxYg=="><img src="/Social Media Icons/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/share/14G5j4Ss99P/?mibextid=wwXIfr"><img src="/Social Media Icons/facebook.png" alt="Facebook"></a></li>
+            <a href="https://t.snapchat.com/CyZt7ylK"><img src="/Social Media Icons/snapchat.png" alt="Snapchat"></a>
+            <a href="https://www.tiktok.com/@jemimah.hhh?_t=ZM-8yT65F9akpa&_r=1"><img src="/Social Media Icons/tiktok.png" alt="Tiktok"></a>
+            <a href="https://www.linkedin.com/in/jemimah-tizhe?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="/Social Media Icons/linkedin.png" alt="Linkedin"></a>
+          </div>
+        </div>
+      </div>
+      
+<!-- Beginning of Footer Bottom Section  -->
+ <div class="footer-bottom animate__animated animate__slideInUp">
+  <p>&copy; <span id="year"></span> Jemimah Tizhe. All rights reserved.</p>
+ </div>
+<!-- Ending of Footer Bottom Section  -->
+
+</footer>
+
+<!-- Ending of Footer Section  -->
+
+<!--Beginning of Javascript Section-->
+    <script src="/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!--Ending of Javascript Section-->
+</body>
 </html>

@@ -1,0 +1,2643 @@
+/*Beginning of Keyframes*/
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@keyframes zoomFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes zoomLoop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/*Ending of Keyframes*/
+
+/** Variables **/
+
+:root {
+  --color-background: #e7e7e7;
+  --color-background-alt: #888888;
+  --color-border-active: #c71585;
+  --color-border-default: #d1d1d1;
+  --color-highlight: #fdcf4c;
+  --color-primary: #c71585;
+  --color-primary-active: #a0126e;
+  --color-text-default: #262626;
+  --color-text-muted: #4f4f4f;
+
+  --font-family-body: "Figtree", system-ui, sans-serif;
+  --font-family-display: "Poppins", system-ui, sans-serif;
+}
+
+/*Beginning of the Page Animations*/
+
+/*Ending of the Page Animation*/
+
+body {
+    margin: 0;
+    background-color: white;
+    color: #111;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/*Beginning of Navigation Section*/
+/* --- Navigation Styling --- */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.25); /* Transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  border-radius: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.logo h2 {
+  color: #c71585;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #c71585;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #c71585;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-menu {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-menu img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.social-menu img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; /* or your color */
+    z-index: 1000;}
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .social-menu {
+    margin-top: 10px;
+  }
+}
+
+/*End of Navigation Section*/
+
+/*Beginning of First Section*/
+.first-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Enables responsiveness */
+    padding: 50px;
+    gap: 40px;
+    background-color: #fff;
+}
+
+.first-section a {
+    text-decoration: none;
+    background-color: #c71585;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.first-section a:hover {
+    background-color: red;
+}
+
+.first-section-writeup {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+
+.first-section-writeup h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.first-section-writeup p {
+    font-size: 1.1rem;
+    color: gray;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.first-section-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.first-section-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+    animation: zoomLoop 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+/* End of First Section */
+
+/*Beginning of What I do Section*/
+
+.whatido {
+    background-color: #fce4ec; /* Soft pastel pink */
+    padding: 50px;
+}
+
+.whatido h1 {
+    color: #c71585;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.whatido-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.whatido-writeup h3 {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.whatido-image {
+    flex: 1 1 200px;
+    max-width: 200px;
+    background-color: white;
+    border: 1px solid lightpink;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 lightpink;
+    transition: transform 0.3s ease;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+
+.whatido-image:hover {
+    transform: translateY(-5px);
+}
+
+.whatido-section img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid pink;
+}
+
+.whatido-writeup {
+    padding: 0 10px;
+}
+
+.whatido-section a {
+    padding: 10px 20px;
+    background-color: #c71585;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.whatido-section a:hover {
+    background-color: red;
+}
+
+@media (max-width: 600px) {
+    .whatido-writeup h3 {
+        font-size: 1rem;
+    }
+
+    .whatido-section button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        margin-top: 50px;
+    }
+}
+
+/*Ending of What I do Section*/
+
+/*Beginnng of Article*/
+
+.article-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.article-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.article {
+    display: flex;
+    flex-wrap: wrap; /* Enables Responsiveness */
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin: 0 auto;
+}
+
+.article-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.article-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    animation: zoomLoop 4s ease-in-out infinite;
+    transition: transform 0.3s ease;animation: zoomLoop 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.article-writeup {
+    flex: 1 1 400px;
+    color: #333;
+}
+
+.article-writeup h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.article-writeup p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.article-writeup a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #c71585;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.article-writeup a:hover {
+    background-color: red;
+}
+/*Ending of Article Section*/
+
+
+
+
+/*Beginning of Testimonial Section*/
+.testimonials-section {
+    background-color: #fff0f5; /* soft pink */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    color: #c71585;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.testimonial-card {
+    background-color: white;
+    border: 1px solid #ffc0cb;
+    box-shadow: 0 4px 8px rgba(255, 192, 203, 0.3);
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #c71585;
+}
+
+
+    /* Animation */
+    @keyframes scroll-left {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+/*Ending of Testimonial Section*/
+
+
+
+
+/*Beginning of About Me Page*/
+
+/*Beginning of First Section*/
+.aboutus-first-section {
+    padding: 60px 50px;
+}
+
+.aboutus-first-section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutus-first-section-image img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 20px;
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+.aboutus-first-section-text {
+    max-width: 600px;
+}
+
+.aboutus-first-section-text h1 {
+    font-size: 2.2rem;
+    color: #c71585;
+    margin-bottom: 20px;
+}
+
+.aboutus-first-section-text p {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.download-cv-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #c71585;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.download-cv-btn:hover {
+  background-color: red;
+}
+/*Ending of First Section*/
+
+/*Beginning of My Skills*/
+.myskills {
+  text-align: center;
+  margin: 40px 0;
+  background-color: #fce4ec;
+  padding: 40px 50px;
+}
+
+.myskills h1 {
+    color: #c71585;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.myskills-writeup h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #444;
+}
+
+.skills-image {
+  display: flex;
+  justify-content: center;   /* center icons */
+  align-items: center;
+  flex-wrap: wrap;           /* wrap to next line if too many */
+  gap: 90px;                 /* space between items */
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills img {
+  width: 80px;   /* set consistent size */
+  height: 80px;
+  object-fit: contain; /* keeps aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.skills img:hover {
+  transform: scale(1.1); /* subtle hover effect */
+}
+
+.skills p {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+/*Ending of My Skills*/
+
+/*Beginning of My Certificates Section*/
+
+.certificates-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.certificates-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #c71585;
+}
+
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.certificate-card {
+  background: #fce4ec;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.certificate-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.download-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #c71585;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #a0126e;
+}
+/*Ending of My Certificates Sections*/
+
+/*Beginning of Photo Gallery*/
+/* Photo Gallery Section */
+.photo-gallery {
+  padding: 60px 5%;
+  background-color: #f9f9f9;
+}
+
+.photo-gallery h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #c71585;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/*Ending of Photo Gallery*/
+
+/*Beginning of Contact Us*/
+.contact-card-section {
+  padding: 60px 5%;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.contact-card-left {
+  background: #c71585;
+  color: white;
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers Horizontally */
+
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
+
+.contact-card-left h3 {
+  margin: 10px 0 5px;
+}
+
+.contact-card-left p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.contact-card-right {
+  flex: 2;
+  padding: 40px;
+  min-width: 300px;
+}
+
+.contact-card-right h2 {
+  color: #c71585;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c71585;
+  outline: none;
+}
+
+.contact-form button {
+  background: #c71585;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #a2146c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-card-right {
+    padding: 30px 20px;
+  }
+}
+
+/*Beginning of Social Media in Contact Page*/
+.social-media {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-media img:hover {
+  transform: scale(1.2);
+}
+/*Ending of Social Media in Contact Page*/
+/*Ending of Contact Us*/
+
+/*Beginning of Formspree Contact Me Page*/
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/** Base **/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family-body);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+[type="checkbox"],
+[type="radio"],
+[type="range"] {
+  appearance: none;
+  flex-shrink: 0;
+  padding: 0;
+  -webkit-user-select: auto;
+    user-select: none;
+}
+
+[type="checkbox"]:focus,
+[type="radio"]:focus,
+[type="range"]:focus {
+  outline: none;
+}
+
+/** Components **/
+
+.fs-form {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.fs-form:where(.fs-layout__2-column) {
+  column-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+fieldset {
+  display: grid;
+  margin: 1.5rem 0;
+  row-gap: 1.5rem;
+}
+
+.fs-form:where(.fs-layout__2-column) fieldset {
+  column-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / -1;
+}
+
+.fs-fieldset-title {
+  color: var(--color-text-default);
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+  grid-column: 1 / -1;
+}
+
+.fs-field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.fs-label {
+  color: var(--color-text-default);
+  display: block;
+  font-family: var(--font-family-display);
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.fs-button-group {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 1.5rem;
+}
+
+.fs-form:where(.fs-layout__2-column) .fs-button-group {
+  grid-column: 1 / -1;
+}
+
+.fs-button {
+  background-color: var(--color-primary);
+  border-radius: 9999px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 0.75rem 2rem;
+  transition-duration: 200ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fs-button:hover {
+  background-color: var(--color-primary-active);
+}
+
+.fs-button:focus-visible {
+  background-color: var(--color-primary-active);
+  outline: 4px solid var(--color-highlight);
+}
+
+.fs-input,
+.fs-select {
+  appearance: none;
+  border-radius: 9999px;
+  border-width: 0;
+  box-shadow: var(--color-border-default) 0 0 0 1px inset;
+  color: var(--color-text-default);
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 1.5rem;
+  outline: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.fs-input:focus-visible,
+.fs-select:focus-visible {
+  box-shadow: var(--color-border-active) 0 0 0 1px inset;
+}
+
+.fs-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.fs-checkbox-group,
+.fs-radio-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.fs-checkbox-field,
+.fs-radio-field {
+  column-gap: 0.5rem;
+  display: flex;
+}
+
+:is(.fs-checkbox-field, .fs-radio-field) .fs-label + .fs-description {
+  margin-top: 0.25rem;
+}
+
+.fs-checkbox-wrapper,
+.fs-radio-wrapper {
+  align-items: center;
+  display: flex;
+  height: 1.25rem;
+}
+
+.fs-checkbox,
+.fs-radio {
+  background-color: #fff;
+  border: 1px solid var(--color-border-default);
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.fs-checkbox {
+  border-radius: 0.25rem;
+}
+
+.fs-radio {
+  border-radius: 100%;
+}
+
+.fs-checkbox:checked,
+.fs-radio:checked {
+  background-color: var(--color-primary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
+
+.fs-checkbox:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+.fs-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+}
+
+.fs-checkbox:focus-visible,
+.fs-radio:focus-visible {
+  border-color: var(--color-border-active);
+  outline: 4px solid var(--color-highlight);
+  outline-offset: 0;
+}
+
+.fs-checkbox:checked:focus-visible,
+.fs-radio:checked:focus-visible {
+  border-color: transparent;
+}
+
+.fs-select {
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.625em 1.625em;
+  padding-right: 2.875rem;
+}
+
+.fs-slider {
+  background: transparent;
+  cursor: pointer;
+  height: 1.25rem;
+  width: 100%;
+}
+
+.fs-slider::-moz-range-track {
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+.fs-slider::-webkit-slider-runnable-track {
+  background-color: var(--color-background);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+.fs-slider::-moz-range-thumb {
+  background-color: var(--color-primary);
+  border: none; /* Removes extra border that FF applies */
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.fs-slider::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  height: 1.25rem;
+  margin-top: -0.375rem; /* Centers thumb on the track */
+  width: 1.25rem;
+}
+
+.fs-slider:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.fs-slider:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.fs-switch {
+  background-color: var(--color-background-alt);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.75' fill='white'/%3e%3c/svg%3e");
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  height: 1.25rem;
+  transition-duration: 200ms;
+  transition-property: background-color, background-position;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 2.5rem;
+}
+
+.fs-switch:checked {
+  background-color: var(--color-primary);
+  background-position: right center;
+}
+
+.fs-switch:focus-visible {
+  outline: 4px solid var(--color-highlight);
+  outline-offset: 0;
+}
+
+.fs-textarea {
+  appearance: none;
+  border-radius: 0.75rem;
+  border-width: 0;
+  box-shadow: var(--color-border-default) 0 0 0 1px inset;
+  color: var(--color-text-default);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  resize: vertical;
+}
+
+.fs-textarea:focus-visible {
+  box-shadow: var(--color-border-active) 0 0 0 1px inset;
+}
+
+.fs-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/** Utilities **/
+
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
+.fs-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.slider-label-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.slider-label-text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+/*Ending of Contact Me Page*/
+
+
+/*Beginning of My Projects (projects.html)*/
+
+.myprojects-container {
+    justify-content: space-between;
+    padding: 60px 50px;
+}
+
+.myprojects-container h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #c71585;
+
+}
+
+.myprojects-btn {
+  display: inline-block;
+  background-color: #c71585;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.myprojects-btn:hover {
+  background-color: red;
+}
+
+
+.myprojects-button-section {
+    text-align: center;
+    justify-content: space-between;
+}
+
+.myprojects-button-section button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.myprojects-button-section button a {
+    text-decoration: none;
+    color: white;
+}
+
+.cards-btn {
+  display: inline-block;
+  background-color: #c71585;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.cards-btn:hover {
+  background-color: red;
+}
+
+
+.myprojects-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.myprojects-cards-image {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+    flex: 1 1 200px;
+    max-width: 200px;
+    background-color: white;
+    border: 1px solid lightpink;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 lightpink;
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.myprojects-cards-image:hover {
+    transform: translateY(-5px);
+}
+
+.myprojects-cards-image img {
+    width: 200px;
+    height: 200px;
+}
+
+.myprojects-cards h3 {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #444;
+}
+
+.myprojects-cards-image button {
+    padding: 10px 20px;
+    background-color: #c71585;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.myprojects-cards-image button a {
+    text-decoration: none;
+    color: white;
+}
+
+.myprojects-cards-image button:hover {
+    background-color: red;
+}
+/*Ending of My Projects*/
+
+
+/*Beginning of LS Logo Page*/
+.about-ls-logo {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-ls-logo h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.ls-logo-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.ls-logo-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.ls-logo-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.ls-logo-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.ls-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.image-gallery img {
+  max-width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Style */
+/* Beginning of Modal Section */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur();
+  backdrop-filter: blur(5px);
+}
+
+/* Modal image */
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.4s ease;
+  object-fit: contain;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+/* Optional animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*Ending of LS Logo Page*/
+
+/*Beginning of HR Logo Page*/
+.about-hr {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-hr h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.hr-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.hr-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.hr-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.hr-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.hr-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-hr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.image-gallery-hr img {
+  max-width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-hr img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Style */
+/* Beginning of Modal Section */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur();
+  backdrop-filter: blur(5px);
+}
+
+/* Modal image */
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.4s ease;
+  object-fit: contain;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+/* Optional animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*Ending of HR Logo Page*/
+
+/*Beginning of Mima's Fast Food.html Page*/
+.about-mimasfastfood {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-mimasfastfood h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.mimasfastfood-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.mimasfastfood-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.mimasfastfood-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.mimasfastfood-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.mimasfastfood-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-mimasfastfood {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.image-gallery-mimasfastfood img {
+  max-width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-mimasfastfood img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Style */
+/* Beginning of Modal Section */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur();
+  backdrop-filter: blur(5px);
+}
+
+/* Modal image */
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.4s ease;
+  object-fit: contain;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+/* Optional animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*Ending of Mima's Fast Food.html*/
+
+/*Beginning of Emmanic Gadgets*/
+.about-emmanic {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-emmanic h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.emmanic-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.emmanic-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.emmanic-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.emmanic-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.emmanic-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-emmanic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-emmanic img {
+  max-width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-emmanic img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Style */
+/* Beginning of Modal Section */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur();
+  backdrop-filter: blur(5px);
+}
+
+/* Modal image */
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.4s ease;
+  object-fit: contain;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+/* Optional animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*Ending of Emmanic Gadgets*/
+
+/*Beginning of Royent Logo Section*/
+.royent-testimonial-section {
+    display: flex;
+    justify-content: center;  /* centers horizontally */
+    align-items: center;      /* centers vertically (optional) */
+    padding: 20px;
+}
+
+.royent-testimonial-card {
+    background-color: white;
+    border: 1px solid #ffc0cb;
+    box-shadow: 0 4px 8px rgba(255, 192, 203, 0.3);
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    text-align: center;
+} 
+
+.royent-testimonial-card:hover {
+    transform: translateY(-5px);
+}
+/*Ending of Royent Logo Section*/
+
+/*Beginning of Project Ui/Ux Section*/
+.myprojects-uiux-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.myprojects-uiux-cards h3 {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #444;
+}
+
+.myprojects-uiux-cards-image {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+    flex: 1 1 200px;
+    max-width: 200px;
+    background-color: white;
+    border: 1px solid lightpink;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 lightpink;
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.myprojects-uiux-cards-image:hover {
+    transform: translateY(-5px);
+}
+
+.myprojects-uiux-cards-image img {
+    width: 200px;
+    height: 200px;
+}
+
+.myprojects-uiux-cards-image button {
+    padding: 10px 20px;
+    background-color: #c71585;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.myprojects-uiux-cards-image button a {
+    text-decoration: none;
+    color: white;
+}
+
+.myprojects-uiux-cards-image button:hover {
+    background-color: red;
+}
+/*Ending of Project Ui/Ux*/
+
+/*Beginning of Frontend Section*/
+.myfrontend-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.myfrontend-cards h3 {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #444;
+}
+
+.myfrontend-cards-image {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+    flex: 1 1 200px;
+    max-width: 200px;
+    background-color: white;
+    border: 1px solid lightpink;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 lightpink;
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    padding-top: 20px;
+}
+
+.myfrontend-cards-image:hover {
+    transform: translateY(-5px);
+}
+
+.myfrontend-cards-image img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.myfrontend-cards-image button {
+    padding: 10px 20px;
+    background-color: #c71585;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.myfrontend-cards-image button a {
+    text-decoration: none;
+    color: white;
+}
+
+.myfrontend-cards-image button:hover {
+    background-color: red;
+}
+/*Ending of Frontend Section*/
+
+/*Beginning of Auspis Prime Section*/
+.about-auspisprime {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-auspisprime h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.auspisprime-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.auspisprime-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.auspisprime-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.auspisprime-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.auspisprime-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-auspisprime {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-auspisprime img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-auspisprime img:hover {
+  transform: scale(1.05);
+}
+
+.auspisprime-video {
+    justify-content: center;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.auspisprime-video video {
+    max-width: 300px;
+    height: auto;
+}
+ 
+/*Ending of Auspisprime Flyers Section*/
+
+
+/*Beginning of Mima's Online Store Flyers Section*/
+.image-gallery-mimasonlinestore-flyers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-mimasonlinestore-flyers img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-mimasonlinestore-flyers img:hover {
+  transform: scale(1.05);
+}
+
+ .mimasonlinestore-video {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.mimasonlinestore-video h1 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* makes them stack on small screens */
+}
+
+.video-card {
+  flex: 1 1 45%;
+  max-width: 450px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+/*Ending of Mima's Online Store Section*/
+
+
+/*Beginning of Royent Flyers Section*/
+.image-gallery-royent-flyers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-royent-flyers img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-royent-flyers img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal default hidden */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  animation: zoom 0.3s ease-in-out;
+}
+
+/* Zoom animation */
+@keyframes zoom {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #ff5a5a;
+}
+
+/*Ending of Royent Flyer Section*/
+
+/*Beginning of Asta Beauty Corner Flyer Section*/
+.about-asta {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-asta h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.asta-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.asta-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.asta-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.asta-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.asta-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-asta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-asta img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-asta img:hover {
+  transform: scale(1.05);
+}
+/*Ending of Asta Beauty Corner Flyer Section*/
+
+/*Beginning of Git Hub Page*/
+.about-github {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #444;
+  line-height: 1.7;
+}
+
+.about-github h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #c71585;
+}
+
+.github-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.github-image img {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.github-image img:hover {
+  transform: scale(1.1);
+}
+
+.viewprofile-button {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.viewprofile-button .cards-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #c71585;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.viewprofile-button .cards-btn:hover {
+  background: red;
+  transform: scale(1.05);
+}
+
+.github-writeup h3 {
+  font-size: 1.3rem;
+  margin: 25px 0 15px;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.github-writeup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.github-writeup li {
+  background: #f7f7f7;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.github-writeup li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.github-writeup li strong {
+  font-size: 1.1rem;
+}
+
+.github-writeup li p {
+  margin: 8px 0;
+  color: #444;
+}
+
+.github-writeup li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.github-writeup li a:hover {
+  color: red;
+}
+
+.github-writeup ul:last-of-type {
+  margin-top: 20px;
+}
+
+.github-writeup ul li {
+  margin-bottom: 10px;
+}
+
+
+
+/*Ending of Git Hub Page*/
+
+/*Beginning of Mima's Fast Food Ui/Ux Page*/
+.about-mimasfastfooduiux {
+  background-color: #fff;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-mimasfastfooduiux h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c71585;
+}
+
+.mimasfastfooduiux-writeup h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #c71585;
+}
+
+.mimasfastfooduiux-writeup p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #444;
+}
+
+.mimasfastfooduiux-writeup ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.mimasfastfooduiux-writeup ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: #555;
+} 
+
+.mimasfastfooduiux-section {
+  padding: 40px 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.mimasfastfooduiux-section h1 {
+    text-align: center;
+    color: #c71585;
+    margin: 50px;
+    font-size: 2.5rem;
+}
+
+.image-gallery-mimasfastfooduiux {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  max-width: 1200px;         /* centers whole gallery within the page */
+  margin: 0 auto;            /* centers the gallery itself */
+}
+
+.image-gallery-mimasfastfooduiux img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.image-gallery-mimasfastfooduiux video {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Each Image Card */
+.mimasfastfooduiux-image-card {
+  display: flex;
+  flex-direction: column;  /* image on top, caption below */
+  align-items: center;
+  width: auto;            /* fixed width for all cards */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mimasfastfooduiux-image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.mimasfastfooduiux-image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;   /* space between image and caption */
+}
+
+.mimasfastfooduiux-image-card p {
+  text-align: center;
+  font-size: 1.0rem;
+  color: #555;
+}
+
+.mimasonlinestoreuiux-video {
+    justify-content: center;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.mimasonlinestoreuiux-video video {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Modal Style */
+/* Beginning of Modal Section */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur();
+  backdrop-filter: blur(5px);
+}
+
+/* Modal image */
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.4s ease;
+  object-fit: contain;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+/* Optional animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Modal default hidden */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  animation: zoom 0.3s ease-in-out;
+}
+
+/* Zoom animation */
+@keyframes zoom {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #ff5a5a;
+}
+
+/*Ending of Mima's Fast Food Ui/Ux Page*/
+
+/*Beginning of Footer Section*/
+.footer {
+  background: #f9f9f9;
+  color: #333;
+  padding: 40px 20px 10px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #d63384;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.footer-links h3 {
+    color: #c71585;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-social h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #c71585;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d63384;
+}
+
+.footer-social .social-icons a {
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.footer-social h3 {
+    color: #c71585;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+/*Ending of Footer Section*/
+
+/*Beginning of Footer Bottom*/
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.footer-bottom p {
+    color: #c71585;
+}
+
+/*End of Footer Bottom*/
+
