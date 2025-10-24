@@ -1,5 +1,15 @@
 //Beginning of the Navigation Bar
 
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const navRight = document.querySelector('.nav-right');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    navRight.classList.toggle('active');
+  });
+
 //Ending of Navigation Bar
 
 // ====== Footer Year ======
@@ -113,175 +123,40 @@ console.log("JS is connected!");
 
 
 
-//Aniamtion on Scroll Effect
-AOS.init();
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-// You can also pass an optional settings object
-// below listed default settings
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-  
-
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
+  // Example: mobile menu toggle (optional)
+  const menuBtn = document.querySelector('.menu-btn');
+  const navMenu = document.querySelector('.nav-menu');
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
 });
 
-//For the scrolling effect 
-import { useRef, useState, useEffect } from 'react';
-import { motion, useInView } from 'motion/react';
-import './AnimatedList.css';
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+  duration: 1000, // controls how long the animation lasts
+  once: false,    // set to true if you want it to animate only once
+});
 
-const AnimatedItem = ({ children, delay = 0, index, onMouseEnter, onClick }) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { amount: 0.5, triggerOnce: false });
-  return (
-    <motion.div
-      ref={ref}
-      data-index={index}
-      onMouseEnter={onMouseEnter}
-      onClick={onClick}
-      initial={{ scale: 0.7, opacity: 0 }}
-      animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.7, opacity: 0 }}
-      transition={{ duration: 0.2, delay }}
-      style={{ marginBottom: '1rem', cursor: 'pointer' }}
-    >
-      {children}
-    </motion.div>
-  );
-};
+const elements = document.querySelectorAll('[data-aos]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      const ratio = entry.intersectionRatio;
+      el.style.opacity = ratio;
+      el.style.transform = `translateY(${(1 - ratio) * 30}px)`;
+    });
+  }, { threshold: Array.from({ length: 21 }, (_, i) => i / 20) });
 
-const AnimatedList = ({
-  items = [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5',
-    'Item 6',
-    'Item 7',
-    'Item 8',
-    'Item 9',
-    'Item 10',
-    'Item 11',
-    'Item 12',
-    'Item 13',
-    'Item 14',
-    'Item 15'
-  ],
-  onItemSelect,
-  showGradients = true,
-  enableArrowNavigation = true,
-  className = '',
-  itemClassName = '',
-  displayScrollbar = true,
-  initialSelectedIndex = -1
-}) => {
-  const listRef = useRef(null);
-  const [selectedIndex, setSelectedIndex] = useState(initialSelectedIndex);
-  const [keyboardNav, setKeyboardNav] = useState(false);
-  const [topGradientOpacity, setTopGradientOpacity] = useState(0);
-  const [bottomGradientOpacity, setBottomGradientOpacity] = useState(1);
+  elements.forEach(el => observer.observe(el));
 
-  const handleScroll = e => {
-    const { scrollTop, scrollHeight, clientHeight } = e.target;
-    setTopGradientOpacity(Math.min(scrollTop / 50, 1));
-    const bottomDistance = scrollHeight - (scrollTop + clientHeight);
-    setBottomGradientOpacity(scrollHeight <= clientHeight ? 0 : Math.min(bottomDistance / 50, 1));
-  };
-
-  useEffect(() => {
-    if (!enableArrowNavigation) return;
-    const handleKeyDown = e => {
-      if (e.key === 'ArrowDown' || (e.key === 'Tab' && !e.shiftKey)) {
-        e.preventDefault();
-        setKeyboardNav(true);
-        setSelectedIndex(prev => Math.min(prev + 1, items.length - 1));
-      } else if (e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey)) {
-        e.preventDefault();
-        setKeyboardNav(true);
-        setSelectedIndex(prev => Math.max(prev - 1, 0));
-      } else if (e.key === 'Enter') {
-        if (selectedIndex >= 0 && selectedIndex < items.length) {
-          e.preventDefault();
-          if (onItemSelect) {
-            onItemSelect(items[selectedIndex], selectedIndex);
-          }
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [items, selectedIndex, onItemSelect, enableArrowNavigation]);
-
-  useEffect(() => {
-    if (!keyboardNav || selectedIndex < 0 || !listRef.current) return;
-    const container = listRef.current;
-    const selectedItem = container.querySelector(`[data-index="${selectedIndex}"]`);
-    if (selectedItem) {
-      const extraMargin = 50;
-      const containerScrollTop = container.scrollTop;
-      const containerHeight = container.clientHeight;
-      const itemTop = selectedItem.offsetTop;
-      const itemBottom = itemTop + selectedItem.offsetHeight;
-      if (itemTop < containerScrollTop + extraMargin) {
-        container.scrollTo({ top: itemTop - extraMargin, behavior: 'smooth' });
-      } else if (itemBottom > containerScrollTop + containerHeight - extraMargin) {
-        container.scrollTo({
-          top: itemBottom - containerHeight + extraMargin,
-          behavior: 'smooth'
-        });
-      }
-    }
-    setKeyboardNav(false);
-  }, [selectedIndex, keyboardNav]);
-
-  return (
-    <div className={`scroll-list-container ${className}`}>
-      <div ref={listRef} className={`scroll-list ${!displayScrollbar ? 'no-scrollbar' : ''}`} onScroll={handleScroll}>
-        {items.map((item, index) => (
-          <AnimatedItem
-            key={index}
-            delay={0.1}
-            index={index}
-            onMouseEnter={() => setSelectedIndex(index)}
-            onClick={() => {
-              setSelectedIndex(index);
-              if (onItemSelect) {
-                onItemSelect(item, index);
-              }
-            }}
-          >
-            <div className={`item ${selectedIndex === index ? 'selected' : ''} ${itemClassName}`}>
-              <p className="item-text">{item}</p>
-            </div>
-          </AnimatedItem>
-        ))}
-      </div>
-      {showGradients && (
-        <>
-          <div className="top-gradient" style={{ opacity: topGradientOpacity }}></div>
-          <div className="bottom-gradient" style={{ opacity: bottomGradientOpacity }}></div>
-        </>
-      )}
-    </div>
-  );
-};
-
-export default AnimatedList;
-//ending of the scrolling effect
+  // Update footer year
+  document.getElementById("year").textContent = new Date().getFullYear();

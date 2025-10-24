@@ -19,25 +19,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// POST route for contact form
-// app.post("/send", (req, res) => {
-//   const { name, email, message } = req.body;
-
-//   const mailOptions = {
-//     from: process.env.EMAIL_USER, // Gmail account
-//     to: process.env.EMAIL_USER,   // Your inbox
-//     subject: `Portfolio Contact Form: ${name}`,
-//     text: `From: ${email}\n\n${message}`,
-//   };
-
-//   transporter.sendMail(mailOptions, (error, info) => {
-//     if (error) {
-//       console.error("Send email error:", error);
-//       return res.status(500).send("❌ Error sending email.");
-//     }
-//     res.send("✅ Message sent successfully!");
-//   });
-// });
 
 // POST route for contact form
 app.post("/send", (req, res) => {
