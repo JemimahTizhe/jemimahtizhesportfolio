@@ -2243,17 +2243,15 @@ color: #444;
   gap: 20px;
   justify-content: center;
   padding: 20px 0;
+  margin-bottom: 50px;
 }
 
 .image-gallery-lslogo img {
-  width: auto;
-  max-width: 300px;
-  height: auto;
+  max-width: 200px;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: contain;
 }
 
 .image-gallery-lslogo img:hover {
@@ -2408,18 +2406,17 @@ color: #444;
   }
 
   .image-gallery-lslogo img {
-    max-width: 100px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .image-gallery-lslogo img {
+    width: 75px;
+    max-width: 75px;
   }
 }
 /*Ending of Small Phones (320px)*/
-
-/* Beginning of Big Phones (420px)*/
-@media (max-width: 420px) {
-  .image-gallery-lslogo img {
-    max-width: 110px;
-  }
-}
-/* Ending of Big Phones (420px)*/
 
 /* Beginning of Big Phones (480px)*/
 @media (max-width: 480px) {
@@ -2440,7 +2437,7 @@ color: #444;
   }
 
   .image-gallery-lslogo img {
-    max-width: 120px;
+    max-width: 100%;
   }
 }
 /* Ending of Big Phones (480px)*/
@@ -2460,7 +2457,7 @@ color: #444;
   }
 
   .image-gallery-lslogo img {
-    max-width: 150px;
+    max-width: 45%;
   }
 }
 /* Ending of Tablet Screens (768px) */
@@ -4015,11 +4012,12 @@ color: #444;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-gallery-auspisprime img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .auspisprime-video {
@@ -4554,6 +4552,28 @@ color: #444;
     font-size: 2.5rem;
 }
 
+.image-gallery-royent-flyers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.image-gallery-royent-flyers img {
+  max-width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba (0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery-royent-flyers img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
 .royent-testimonial-container {
   margin-bottom: 50px;
 }
@@ -4565,25 +4585,26 @@ color: #444;
   color: #c71585;
 }
 
-.image-gallery-royent-flyers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.royent-logo-testimonial-card {
+  background-color: white;
+  border: 1px solid #ffc0cb;
+  box-shadow: 0 4px 8px rgba(255, 192, 203, 0.3);
   padding: 20px;
-  margin-bottom: 50px;
-}
-
-.image-gallery-royent-flyers img {
-  max-width: 200px;
+  width: 300px;
   border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
-.image-gallery-royent-flyers img:hover {
-  transform: scale(1.05);
+.royent-logo-testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.royent-logo-testimonial-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 /* Modal default hidden */
@@ -4634,38 +4655,58 @@ color: #444;
 /* Responsive CSS for Royent Flyers */
 /* ≤ 320px (Extra small phones) */
 @media (max-width: 320px) {
-  .royent-flyer-section {
+  /* .royent-flyer-section {
     padding: 0 20px;
+  } */
+
+  .about-royent-flyer {
+    padding: 25px 15px;
   }
 
   .royent-flyer-section h1 {
-    margin: 30px 20px 25px 20px;
     font-size: 1.5rem;
   }
 
+  .royent-flyer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .royent-flyer-writeup p,
+  .royent-flyer-writeup ul li {
+    font-size: 0.9rem;
+  }
+
   .image-gallery-royent-flyers {
-    padding: 40px 0;
-    gap: 40px;
-    margin-bottom: 60px;
-    flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
   .image-gallery-royent-flyers img {
     max-width: 100%;
-    width: 100%;
-    margin: 0;
+  }
+
+  .royent-logo-testimonial-card {
+    max-width: 100%;
   }
 }
 
 /* ≤ 480px (Small phones) */
 @media (max-width: 480px) {
-  .royent-flyer-section {
+  /* .royent-flyer-section {
     padding: 0 25px;
-  }
+  } */
+   .about-royent-flyer {
+    padding: 30px 20px;
+   }
+
+   .about-royent-flyer h1 {
+    font-size: 1.8rem;
+   }
+
+   .royent-flyer-writeup h3 {
+    
+   }
 
   .royent-flyer-section h1 {
-    margin: 30px 25px 30px 25px;
     font-size: 1.8rem;
   }
 
