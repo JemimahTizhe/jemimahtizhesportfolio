@@ -2322,6 +2322,7 @@ color: #444;
   font-weight: bold;
   cursor: pointer;
   padding: 16px;
+  -webkit-user-select: none;
   user-select: none;
   z-index: 1001;
   transition: 0.3s;
