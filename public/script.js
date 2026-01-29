@@ -248,3 +248,11 @@ console.log("JS is connected!");
 
 
 // Note: Hamburger menu, AOS initialization, and footer year are handled above in DOMContentLoaded
+
+// //Beginning of Lazy Loadig Images
+// document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+//   img.addEventListener('load', () => {
+//     img.classList.add('loaded');
+//   });
+// });
+// //Ending of Lazy Loading Images
