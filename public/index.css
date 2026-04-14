@@ -113,15 +113,17 @@ html {
   box-sizing: inherit;
 }
 
-/* Beginning of Lazy Loading */
-/* img[loading="lazy"] {
-  filter: blur(5px);
-  transition: filter 0.4s ease;
+/* Beginning of Lazy Loading - Blur-in effect */
+img[loading="lazy"] {
+  filter: blur(8px);
+  opacity: 0.85;
+  transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
 img[loading="lazy"].loaded {
   filter: blur(0);
-} */
+  opacity: 1;
+}
 
 /* Ending of Lazy Loading */
 
@@ -165,6 +167,7 @@ body {
   max-width: 100vw;
   box-sizing: border-box;
   gap: 15px;
+  margin-bottom: 50px
 }
 
 .logo {
@@ -521,6 +524,7 @@ body {
     padding: 120px 50px 50px 50px;
     gap: 40px;
     background-color: #fff;
+    margin-top: 50px;
 }
 
 .first-section a {
@@ -1193,7 +1197,7 @@ body {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 80px;
 }
 
 .aboutus-first-section-text h1 {
@@ -6244,6 +6248,10 @@ color: #444;
 /*Ending of Git Hub Page (github.html)*/
 
 /*Beginning of Mima's Fast Food Ui/Ux Page (mimasfastfooduiux.html)*/ 
+.mimasfastfood-section {
+  padding-top: 90px;
+}
+
 .mimasfastfooduiux-section { 
   padding: 50px;
 } 
@@ -6253,11 +6261,39 @@ color: #444;
   color: #c71585; 
   margin: 50px; 
   font-size: 2.5rem; 
+  margin-top: 50px;
 }
 
 .mimasfastfooduiux-section h1 {
   font-size: 2.5rem;
 } 
+
+.mimasfastfooduiux-prototype h1 {
+  text-align: center;
+  color: #c71585;
+  margin: 50px;
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+
+.mimasfastfooduiux-prototype-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mimasfastfooduiux-prototype-gallery img {
+  max-width: 700px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  object-fit: contain;
+}
 
 .mimasfastfood-hero-gallery { 
   display: flex; 
@@ -6493,6 +6529,8 @@ color: #444;
 .video-grid video { 
   width: 100%; 
   height: auto; 
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
   border-bottom: 2px solid pink;
   display: block;
 } 
@@ -6613,12 +6651,14 @@ color: #444;
 @media (max-width: 320px) { 
   .mimasfastfood-section h1,
   .mimasfastfooduiux-section h1,
-  .mimasonlinestoreuiux-video h1 {
+  .mimasonlinestoreuiux-video h1,
+  .mimasfastfooduiux-prototype h1 {
     font-size: 1.5rem;
     margin: 30px 15px;
   }
 
-  .mimasfastfood-hero-gallery { 
+  .mimasfastfood-hero-gallery, 
+  .mimasfastfooduiux-prototype-gallery { 
     padding: 15px 10px; 
     max-width: 100%;
   } 
@@ -6633,17 +6673,20 @@ color: #444;
 @media (max-width: 480px) { 
   .mimasfastfood-section h1,
   .mimasfastfooduiux-section h1,
-  .mimasonlinestoreuiux-video h1 {
+  .mimasonlinestoreuiux-video h1,
+  .mimasfastfooduiux-prototype h1{
     font-size: 1.8rem;
     margin: 35px 20px;
   }
 
-  .mimasfastfood-hero-gallery { 
+  .mimasfastfood-hero-gallery, 
+  .mimasfastfooduiux-prototype-gallery { 
     padding: 20px 15px; 
     max-width: 100%;
   } 
   
-  .mimasfastfood-hero-gallery img { 
+  .mimasfastfood-hero-gallery img, 
+  .mimasfastfooduiux-prototype-gallery img { 
     max-width: 100%; 
     width: 100%; 
   } 
@@ -6653,17 +6696,20 @@ color: #444;
 @media (max-width: 768px) { 
   .mimasfastfood-section h1,
   .mimasfastfooduiux-section h1,
-  .mimasonlinestoreuiux-video h1 {
+  .mimasonlinestoreuiux-video h1,
+  .mimasfastfooduiux-prototype h1 {
     font-size: 2rem;
     margin: 40px 25px;
   }
 
-  .mimasfastfood-hero-gallery { 
+  .mimasfastfood-hero-gallery,
+  .mimasfastfooduiux-prototype-gallery { 
     padding: 20px 20px; 
     max-width: 100%;
   } 
   
-  .mimasfastfood-hero-gallery img { 
+  .mimasfastfood-hero-gallery img, 
+  .mimasfastfooduiux-prototype-gallery img { 
     max-width: 100%; 
     width: 100%; 
   } 
@@ -6673,7 +6719,8 @@ color: #444;
 @media (max-width: 1024px) and (min-width: 769px) {
   .mimasfastfood-section h1,
   .mimasfastfooduiux-section h1,
-  .mimasonlinestoreuiux-video h1 {
+  .mimasonlinestoreuiux-video h1,
+  .mimasfastfooduiux-prototype h1 {
     font-size: 2.2rem;
   }
 } 
@@ -6681,6 +6728,10 @@ color: #444;
 /* Responsive CSS for Mima's Fast Food UI/UX Section Images */ 
 /* ≤ 320px (Extra small phones) */ 
 @media (max-width: 320px) { 
+  .mimasfastfood-section {
+    padding-top: 60px;
+  }
+
   .mimasfastfooduiux-section {
     padding: 20px 10px;
   }
@@ -6744,6 +6795,10 @@ color: #444;
 
 /* ≤ 480px (Small phones) */ 
 @media (max-width: 480px) { 
+  .mimasfastfood-section {
+    padding-top: 70px;
+  }
+
   .mimasfastfooduiux-section {
     padding: 30px 15px;
   }
@@ -6862,6 +6917,7 @@ color: #444;
   }
 
   .video-grid {
+    padding: 20px 20px;
     gap: 15px;
   }
 
@@ -6879,7 +6935,8 @@ color: #444;
 
 /* ≤ 1024px (Small desktops) */
 @media (max-width: 1024px) and (min-width: 769px) {
-  .mimasfastfooduiux-section {
+  .mimasfastfooduiux-section, 
+  .mimasfastfooduiux-prototype {
     padding: 50px 30px;
   }
 

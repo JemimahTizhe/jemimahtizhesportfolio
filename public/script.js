@@ -43,6 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
+
+  // ====== Lazy-loaded images: blur-in effect (add .loaded when image finishes loading) ======
+  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+    if (img.complete) {
+      img.classList.add("loaded");
+    } else {
+      img.addEventListener("load", () => img.classList.add("loaded"));
+    }
+  });
 });
 
 
